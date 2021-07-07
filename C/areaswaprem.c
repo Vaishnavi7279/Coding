@@ -1,0 +1,36 @@
+//Lab experiment 6 Ques 2//
+#include<stdio.h>
+int triangle_area(int base,int height)
+{
+    int area;
+    area=0.5*base*height;
+    return area;
+}
+void swap(int num1,int num2)
+{
+   printf("\nFUNCTION 2\nNumber before swap-\nFirst number- %d\nSecond number- %d\n",num1,num2);
+   num1=num1+num2;
+   num2=num1-num2;
+   num1=num1-num2;
+   printf("Number after swap-\nFirst number- %d\nSecond number- %d\n",num1,num2);
+}
+float remainder(int num1,int num2)
+{
+    float rem;
+    rem=num1%num2;
+    return rem;
+}
+void main()
+{
+    int num1,num2,area;
+    float rem;
+    printf("Enter the first number-");
+    scanf("%d",&num1);
+    printf("Enter the second number-");
+    scanf("%d",&num2);
+    area=triangle_area(num1,num2);
+    printf("\nFUNCTION 1\nArea of the triangle= %d\n",area);
+    swap(num1,num2);
+    rem=remainder(num1,num2);
+    printf("\nFUNCTION 3\nRemainder= %f",rem);
+}
