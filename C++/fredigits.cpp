@@ -1,8 +1,6 @@
 #include<iostream>
 #include<string>
-#include<conio.h>
 using namespace std;
-
 int main()
 {
     //Enter your code here. Read input from STDIN. Print output to STDOUT 
@@ -25,7 +23,7 @@ int main()
            if(s[i]=='3')
              count3++;
            if(s[i]=='4')
-             count4++;
+             count4++;py
            if(s[i]=='5')
              count6++;
            if(s[i]=='6')

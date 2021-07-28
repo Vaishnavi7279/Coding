@@ -11,7 +11,9 @@ struct node *top = NULL;
 //function to insert element
 void push(int item)
 {
-    struct node *nptr = malloc(sizeof(struct node));
+    //ptr=(int *)malloc(size*sizeof(int));
+    struct node *nptr;
+    nptr = (node *)malloc(sizeof(struct node));
     nptr->data = item;
     nptr->next = top;
     top = nptr;
