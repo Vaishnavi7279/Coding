@@ -1,5 +1,5 @@
 #python strings
-#strings are mutuable 
+#strings are mutuable ; no char datatype
 d = "ABCDEFG"  
 print(d[0:2]) #prints first two elements
 e = 'clocrkr1e1c1t'

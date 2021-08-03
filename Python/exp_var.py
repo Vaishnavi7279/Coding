@@ -1,6 +1,7 @@
 #operation of values
 x=30+98+78+54-26*2
 #26*2=52 subtracting from (30+98+78+54)=208 follows BODMAS
+# ** evaluates the power given on right
 #prints x
 print(x)
 #division
