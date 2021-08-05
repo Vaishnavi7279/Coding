@@ -7,7 +7,7 @@ for i in range(0,size):
 for i in range(0,size):
     sum=i+sum
 print("Sum=",sum)
-for i,j in enumerate(num):
+for i,j in enumerate(num): #goes through every value in the loop
     print(i,j)
 
 #while loop
