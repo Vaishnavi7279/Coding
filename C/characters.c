@@ -9,8 +9,9 @@ int main()
     char ch,s[100],sen[100];
     scanf("%c",&ch);
     scanf("%s",&s);
-    //scanf("%[^\n]%*c", sen);
-    gets(sen);
-    printf("\n%c\n%s\n%s",ch,s,sen);
+    scanf("\n");
+    scanf("%[^\n]%*c", &sen);
+    printf("%c\n%s\n",ch,s);
+	printf("%s\n",sen); 
     return 0;
 }
