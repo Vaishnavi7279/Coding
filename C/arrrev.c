@@ -15,10 +15,10 @@ int main()
        {
            array[i]=array[i]+array[(size-1)-i];
            array[(size-1)-i]=array[i]-array[(size-1)-i];
-           array[i]=array[i]-array[(size-1)-i];
+           //array[i]=array[i]-array[(size-1)-i];
        }
     for(int i=0 ; i<size ; i++)
        {
-           scanf("%d ",&array[i]);
+           printf("%d ",array[i]);
        }
 }
