@@ -17,4 +17,5 @@ def filedispenser(path,thresh,base=False):
             os.rmdir(path)
         return
     #extract the date and time
+    #add the value for threshold
     mod=os.path.getmtime(path)

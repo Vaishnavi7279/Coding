@@ -12,5 +12,11 @@ public class operators {
         //x and y are operands ; + is operator
         int sum=x+y;
         System.out.println(sum);
+        //Pre-Post Increment operators
+        int a=10;
+        //first evaluates then assigns
+        System.out.println("Pre-increment: " + ++a);
+        //assigns the given exp then evaluates
+        System.out.println("Post-increment: " + a++);
     }
 }
