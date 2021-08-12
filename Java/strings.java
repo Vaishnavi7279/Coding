@@ -16,5 +16,22 @@ public class strings {
         String msg=MessageFormat.format
              (msg= "Hi, I am {0}\nI am {1} years old\nThis is {2} year" ,"Vaishnavi" ,18 ,year);
         System.out.printf(msg);
+        //string functions
+        String operation= "sum";
+        System.out.println("\nSum= " +operation);
+        int num1=10;
+        int num2=20;
+        int result;
+        if(operation=="sum") {
+            result=num1+num2;
+        }
+        else {
+            result=num1-num2;
+        }
+        System.out.println("Result= " +result);
+        //ternary if
+        int result2 = operation == "sum" ? num1+num2:num2-num1;
+        //if the operation = sum, then first statement will execute else other statement will execute
+        System.out.println("Result2= " +result2);
     }
 }
