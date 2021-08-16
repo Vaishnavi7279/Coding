@@ -1,4 +1,4 @@
-//EXP 4 LAB ACT Ques4 VOWEL CONSONANT COUNT//
+//VOWEL CONSONANT COUNT//
 #include<stdio.h>
 #include<string.h>
 int main()

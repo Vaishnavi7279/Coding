@@ -1,3 +1,4 @@
+//calculating the reverse of a 5 digit no
 //Let Us C pg.53 CHAPTER 3: DECISION CONTROL STATEMENTS 1 QUESTIONS
 //Question1
 #include<stdio.h>

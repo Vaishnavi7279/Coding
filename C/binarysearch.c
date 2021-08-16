@@ -1,4 +1,4 @@
-//LAB EXPERIMENT 8 Ques 3//
+//Binary Search//
 #include<stdio.h>
 int main()
 {

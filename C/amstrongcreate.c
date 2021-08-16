@@ -1,4 +1,4 @@
-//LAB EXP 5 Ques - 6 - Amstrong creation till num//
+//Amstrong creation till num//
 #include <stdio.h>
 #include <math.h>
 int main()

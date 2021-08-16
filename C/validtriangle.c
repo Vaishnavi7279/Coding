@@ -1,3 +1,4 @@
+//Checking the valid triangle
 //Let Us C pg.53 CHAPTER 3: DECISION CONTROL STATEMENTS 1 QUESTIONS
 //Question3
 #include<stdio.h>

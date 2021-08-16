@@ -1,4 +1,4 @@
-//LAB EXP 5 Ques - 5 - Pattern upper diamond//
+//Pattern upper diamond//
 #include<stdio.h>
 void main()
 {

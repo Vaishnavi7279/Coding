@@ -1,3 +1,4 @@
+//finding collinear points
 //Let Us C pg.53 CHAPTER 3: DECISION CONTROL STATEMENTS 1 QUESTIONS
 //Question6
 #include<stdio.h>

@@ -1,11 +1,13 @@
-//Lab experiment 6 Ques 2//
+//multiple functions
 #include<stdio.h>
+//function to find the area of a triangle
 int triangle_area(int base,int height)
 {
     int area;
     area=0.5*base*height;
     return area;
 }
+//function to swap 2 numbers
 void swap(int num1,int num2)
 {
    printf("\nFUNCTION 2\nNumber before swap-\nFirst number- %d\nSecond number- %d\n",num1,num2);
@@ -14,7 +16,8 @@ void swap(int num1,int num2)
    num1=num1-num2;
    printf("Number after swap-\nFirst number- %d\nSecond number- %d\n",num1,num2);
 }
-float remainder(int num1,int num2)
+//function to find the remainer after division of 2 numbers
+float remr(int num1,int num2)
 {
     float rem;
     rem=num1%num2;
@@ -31,6 +34,6 @@ void main()
     area=triangle_area(num1,num2);
     printf("\nFUNCTION 1\nArea of the triangle= %d\n",area);
     swap(num1,num2);
-    rem=remainder(num1,num2);
+    rem=remr(num1,num2);
     printf("\nFUNCTION 3\nRemainder= %f",rem);
 }
