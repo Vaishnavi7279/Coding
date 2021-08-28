@@ -1,4 +1,5 @@
-//hackerrank problem to find the greatest of four number using functions
+//HackerRank Problem
+//Find the greatest of four number using functions
 #include <stdio.h>
 int max_of_four(int a, int b, int c, int d)
 {
