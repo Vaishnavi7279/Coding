@@ -29,3 +29,17 @@ print("Hello people!",file=myfile)
 #os.rmdir("folder")
 os.path.exists("hello.txt")
 print(os.path.isdir("../folder"))
+
+#importing pandas
+import pandas as pd
+csv_path='fileCSV.csv'
+df=pd.read_csv(csv_path)
+
+#dataframes- comprises of rows and columns
+#csv_path='fileCSV.csv'
+#df=pd.read_csv(csv_path)
+xlsx_path='fileXLSX.xlsx'
+df=pd.read_excel(xlsx_path)
+#dictin=define the dictionary
+#dictin_frame=pd.DataFrame(dictin) #casting a dictionary to a datafram
+#keys correspond to the table headers. The values are lists corresponding to the rows
