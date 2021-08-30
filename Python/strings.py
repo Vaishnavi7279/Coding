@@ -33,3 +33,4 @@ print(name.upper()) #to upper function
 print(name.lower()) #to lower function
 print(type(name)) #gives the type of 'name'
 dir(name) #gives what the string can do
+#parsing. replacing
