@@ -1,72 +1,69 @@
-//Check if the given number is a palindrome or not
+//Palindrome numbers in C
 #include<stdio.h>
+//function for checking if the given number if palindrome or not 
+int check_palindrome(int num)
+{
+  int temp, rem, sum=0, flag;
+  temp=num;
+  while(temp>0)    
+    {    
+      rem=temp%10;  //calculating the remainder each time after diving by 10
+      sum=(sum*10)+rem;    //adding the remainder at respective places of ones, tens, etc. => num reversed
+      temp=temp/10;    //diving the number with 10 so one digit is getting reduced every time
+    }
+  //checking if the reversed number=the given number
+  if(sum==num)
+    flag=1;
+  else
+    flag=0;
+  return flag;
+}
+//function to create palindrome numbers till a given limit
+void create_palindrome(int num)
+{
+  int rem, temp, sum;
+  for(int i=0 ; i<=num ; i++)
+     {
+       temp=i;
+       sum=0;
+       while(temp>0)
+        {
+           rem=temp%10;
+           sum=(sum*10)+rem;
+           temp=temp/10; 
+        }
+       if(sum==i)
+         printf("%d, ", i);
+       else
+         continue;
+     }
+}
+//main function
 int main()
 {
-    int num,temp,temp1,count=0,i,digit[10],num2[10],j,flag=0;
-    printf("Enter number-");
-    scanf("%d",&num);
-    temp=num;
-    temp1=num;
-    while(temp!=0)
-         {
-            temp=temp/10;
-            count++;
-         }
-    printf("Digits in the number=%d\n",count);
-    while(temp1!=0)
-         {
-            for(i=0 ; i<count ; i++)
-                {
-                    digit[i]=temp1%10;
-                    temp1=temp1/10;
-                    printf("Digits=%d ; ",digit[i]);
-                }
-         }
-    for(j=0,i=(count-1) ; j<count,i>=0 ; j++,i--)
-       {
-           //printf("Loop1 working");
-           //for(i=count ; i>=0 ; i--)
-              //{
-                   num2[j]=digit[i];
-                  printf("%d %d = %d %d \n",i,j,digit[i],num2[j]);
-              //}
-       }
-    for(j=0 ; j<count ; j++)
-       printf("%d",num2[j]);
-    printf("\n");
-    for(i=0 ; i<count ; i++)
-       printf("%d",digit[i]);
-    printf("\n");
-    for(i=0 ; i<count ; i++)
-       {
-           if(digit[i]==num2[i])
-             flag=1;
-       }
-    printf("flag= %d",flag);
-    if(flag==1)
-      printf("The given number is a palindrome");
-    else
-      printf("The given number is not a palindrome");
-    return 0;
-}
-
-
-#include<stdio.h>  
-int main()    
-{    
-  int n,r,sum=0,temp;    
-  printf("Enter the number: ");    
-  scanf("%d",&n);    
-  temp=n;    
-  while(n>0)    
-    {    
-      r=n%10;    
-      sum=(sum*10)+r;    
-      n=n/10;    
-    }    
-  if(temp==sum)    
-    printf("%d is a Palindrome number\n",temp);    
-  else    
-    printf("%d is not a Palindrome number\n",temp);   
-  return 0;  
+  //taking user's input if the number has to be checked or series of palindrome numbers have to be created
+  int function;
+  printf("Enter '1' to check if the given number is Palindrome or not\n");
+  printf("Enter '2' to create Palindrome numbers till a limit\n");
+  scanf("%d", &function);
+  int num;
+  if(function==1)
+    {
+      printf("Enter the number to be checked: \n");
+      scanf("%d", &num);
+      //function calling
+      int flag=check_palindrome(num);
+      if(flag==1)
+        printf("%d is Palindrome", num);
+      else
+        printf("%d is not a Palindrome", num);
+    }
+  else if(function==2)  
+    {
+      printf("Enter the limit: \n");
+      scanf("%d", &num);
+      //function calling
+      create_palindrome(num);
+    }
+  return 0;
 }

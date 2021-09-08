@@ -3,36 +3,30 @@
 #include<math.h>
 void amstrong(int num)
 {
-    int count=0, digit[10], temp1, temp, i, amstrong=0, j,rem;
-    printf("The number recieved is - %d\n",num);
+    int count=0, temp, amstrong=0, rem, cube;
+    printf("The number recieved is= %d\n",num);
     temp=num;
-    //temp1=num;
+    //counting the digits in the number
     while(temp!=0)
       {
         temp=temp/10;
         count++;
       }
-    printf("Digits in the number=%d\n",count);
-    //TRANSFERRING THE DIGITS OF THE NUMBER TO THE ARRAY AND THEN CALCULATING THE AMSTRONG
-    //while(temp1!=0)
-      //{
-        //for(i=1 ; i<=count ; i++)
-           //{
-             //digit[i]=temp1%10;
-             //temp1=temp1/10;
-             //printf("Digits=%d ; ",digit[i]);
-             //amstrong=amstrong+(pow(digit[i],count));
-             //amstrong=amstrong+(digit[i]*digit[i]*digit[i]);
-           //}
-      //}
-    //CHECKING WITH NORMAL METHODS
+    printf("Digits in the number= %d\n",count);
+    temp=num;
+    //calculating the amstrong of the number
     while(temp>0)
       {
          rem=temp%10;
-         amstrong=amstrong+pow(rem,count);
+         if(rem==5)
+           cube=5*5*5; //since the compiler is calculating pow(5,3)=124
+         else 
+           cube=pow(rem,count);
+         amstrong=amstrong+cube;
          temp=temp/10;
       }
-    printf("Amstrong=%d\n",amstrong);
+    printf("Amstrong=%d",amstrong);
+    //checking if the number is an armstrong or not
     if(num==amstrong)
       printf("\n%d is an amstrong number",num);
     else

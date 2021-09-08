@@ -1,27 +1,45 @@
-//Amstrong creation till num//
-#include <stdio.h>
-#include <math.h>
+//Amstrong creation till num
+#include<stdio.h>
+#include<math.h>
+//function for amstrong creation
+void armstrong(int num)
+{
+    int temp, temp1, rem, cube;
+    for(int i=1 ; i<=num ; i++)
+       {
+           int count=0, amstrong=0;
+           temp=i;
+           //checking the digits in the number
+           while(temp!=0)
+             {
+                 temp=temp/10;
+                 count++;
+             }
+           temp1=i;
+           //creating the amstrong for the number
+           while(temp1>0)
+             {
+                 rem=temp1%10;
+                 if(rem==5)
+                   cube=5*5*5;  //since the compiler is calculating pow(5,3)=124
+                 else 
+                   cube=pow(rem,count);
+                 amstrong=amstrong+cube;
+                 temp1=temp1/10;
+             }
+            //printing the number if it satisfies the amstrong condition
+           if(amstrong==i)
+             printf("%d, ", i);
+           else 
+             continue;
+       }
+}
 int main()
 {
-    int num, lastDigit, digits, sum, i, end;
-    printf("Enter upper limit: ");
-    scanf("%d", &end);
-    printf("Armstrong number between 1 to %d are: \n", end);
-    for(i=1; i<=end; i++)
-    {
-        sum = 0;
-        num = i;
-        digits = (int) log10(num) + 1;
-        while(num > 0)
-        {
-            lastDigit = num % 10;
-            sum = sum + ceil(pow(lastDigit, digits));
-            num = num / 10;
-        }
-        if(i == sum)
-        {
-            printf("%d, ", i);
-        }
-    }
-    return 0;
+    //taking the limit as input
+    int num;
+    printf("Enter the number till which Armstrong numbers have to be created: ");
+    scanf("%d", &num);
+    printf("Amstrong numbers till %d are: \n", num);
+    armstrong(num);  //calling the function
 }
