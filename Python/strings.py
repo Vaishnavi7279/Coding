@@ -1,5 +1,5 @@
 #python strings
-#strings are mutuable ; no char datatype
+#strings are immutuable ; no char datatype
 d = "ABCDEFG"  
 print(d[0:2]) #prints first two elements
 print(d[:2]) #prints till the second index
