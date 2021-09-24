@@ -1,7 +1,7 @@
 #working on file in python
 # 'r' for reading ; 'w' for writing ; 'a' for appending
-file1=open("/C/Study Notes/Commands.txt","r")
-file1=open("C:\\Study Notes\\Commands.txt","r")
+file1=open("/C/Coding/Python/Hello World!.txt","r")
+file1=open("C:\\Coding\\Python\\Hello World!.txt","r")
 print(file1.read())
 #use the data attribute name to get the name of the file i.e. file1.name
 #mode of the object using the data attribute mode i.e. file1.mode
@@ -14,12 +14,12 @@ with open("Commands.txt","r") as File1: #File1-object
         print(line)   
 print(File1.closed)
 print(file_stuff)
-file1=open("/C/Study Notes/Commands.txt","w") #writes file
-with open("Commands.txt","w") as File2:
+file1=open("/C/Coding/Python/Hello World!.txt","w") #writes file
+with open("Hello World!.txt","w") as File2:
     File2.write("This is file2")
     for line in File2: #writes each line individually
         File2.write(line)
-with open("Commands.txt","a") as File2: #append()
+with open("Hello World!.txt","a") as File2: #append()
     File2.write("This is append mode")
     
 import os
