@@ -23,3 +23,5 @@ list5[0]=100 #modification on one DOESNT cause modification in other
 print(lists)
 print(list5)
 help(list5) #gives help regarding other operations
+#lists can be concatenated, sliced, length, count, append, sort, min, max, sum
+#in can be used to find elements
